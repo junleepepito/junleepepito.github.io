@@ -1,0 +1,13 @@
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="/" class="w3-bar-item w3-button w3-wide w3-xlarge">JUNLEE</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            {% for item in site.data.navigation %}
+            {% assign npu = page.url | remove: ".html" %}
+            <a href="{{ item.link }}" {% if npu==item.link %} class="current w3-xlarge" {% else %} class="w3-xlarge" {% endif %}>{{ item.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
