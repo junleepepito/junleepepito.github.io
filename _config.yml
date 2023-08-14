@@ -1,8 +1,15 @@
 collections:
+  bins:
+    output: true 
   authors:
     output: true
 
 defaults:
+  - scope:
+      path: ""
+      type: "bins"
+    values:
+      layout: "bin"
   - scope:
       path: ""
       type: "authors"
