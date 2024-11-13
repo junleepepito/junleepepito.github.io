@@ -14,12 +14,5 @@ layout: default
 {{ content }}
 
 <h1>post comments?</h1>
-<div class="w3-container">
-  <script src="https://utteranc.es/client.js"
-        repo="junleepepito/project-comments"
-        issue-term="pathname"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-  </script>
-</div>
+
+{% include comments_utterances.html %}
