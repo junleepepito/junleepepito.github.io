@@ -1,8 +1,18 @@
 - name: Home
+  icon: home
   link: /
-- name: About
-  link: /about
-- name: Blog
+- name: Posts
+  icon: pencil-square-o
   link: /blog
-- name: Staff
-  link: /staff
+- name: Rss
+  icon: rss
+  link: /atom.xml
+# - name: Github
+#   icon: github
+#   link: //github.com/junleepepito/junleepepito.github.io
+# - name: Paypal
+#   icon: paypal
+#   link: //paypal.me/halangdon
+- name: Search
+  icon: search
+  link: /search

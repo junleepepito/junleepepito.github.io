@@ -1,15 +1,8 @@
 collections:
-  bins:
-    output: true 
   authors:
     output: true
 
 defaults:
-  - scope:
-      path: ""
-      type: "bins"
-    values:
-      layout: "bin"
   - scope:
       path: ""
       type: "authors"
@@ -24,10 +17,3 @@ defaults:
       path: ""
     values:
       layout: "default"
-
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-
-permalink: /:categories/:year/:month/:day/:title

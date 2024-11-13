@@ -1,89 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
-    <link href='/assets/images/favicon.ico' rel='icon' type='image/x-icon' />
-    <link rel="stylesheet" href="/assets/css/w3.css" />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Staff</title>
-<meta name="generator" content="Jekyll v4.3.2" />
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Staff" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/staff" />
-<meta property="og:url" content="http://localhost:4000/staff" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Staff" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"Staff","url":"http://localhost:4000/staff"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Staff","url":"/staff.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
 </head>
 
-<body>
-
-
-
-    <!-- <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-        <img class="w3-image" src="/assets/images/me.jpg" alt="Architecture" width="1500" height="800">
-        <div class="w3-display-middle w3-margin-top w3-center">
-            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>BR</b></span> <span
-                    class="w3-hide-small w3-text-light-grey">Architects</span></h1>
-        </div>
-    </header> -->
-    <!-- page content-->
-    <!-- Navbar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-        <a href="/" class="w3-bar-item w3-button w3-xlarge w3-hover-none">JUNLEE</a>
-        <!-- Float links to the right. Hide them on small screens -->
-        <div class="w3-right w3-hide-small">
-            
-            
-            <a href="/"  class="w3-xlarge" >Home</a>
-            
-            
-            <a href="/about"  class="w3-xlarge" >About</a>
-            
-            
-            <a href="/blog"  class="w3-xlarge" >Blog</a>
-            
-            
-            <a href="/staff"  class="current w3-xlarge" >Staff</a>
-            
-        </div>
+<body class="w3-theme-l4">
+    <!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+    <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
+    <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button">Link 4</a>
+</nav>
+    <!-- Content -->
+    <div class="w3-content" style="max-width:1100px">
+        
+        <div class="w3-top w3-theme-d4">
+    <div class="w3-bar">
+        <!-- 
+        <a href="/search" class="w3-bar-item w3-button w3-right w3-hover-theme w3-tooltip"><span
+                class="w3-text">Search</span> <i class="fa fa-search"></i></a> -->
+        
+        <a href="/" class="w3-bar-item w3-button w3-hover-theme w3-tooltip  w3-blue-grey "><i class="fa fa-home"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Home</span></a>
+        
+        <a href="/blog" class="w3-bar-item w3-button w3-hover-theme w3-tooltip "><i class="fa fa-pencil-square-o"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Posts</span></a>
+        
+        <a href="/atom.xml" class="w3-bar-item w3-button w3-hover-theme w3-tooltip "><i class="fa fa-rss"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Rss</span></a>
+        
+        <a href="/search" class="w3-bar-item w3-button w3-hover-theme w3-tooltip  w3-right "><i class="fa fa-search"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Search</span></a>
+        
     </div>
 </div>
-    <div class="w3-content w3-padding-64">
-        <div class="w3-panel">
-            <!-- Header -->
-            <div class="w3-row">
-                <div class="w3-half w3-container">
-                    <img src="/assets/images/me.jpg" alt="me">
-                    <!-- <h2>w3-half</h2> -->
-                </div>
-                <div class="w3-half w3-container">
-                    <!-- <h2>w3-half</h2> -->
-                </div>
-            </div>
+<br /><br />
+        <!-- Header(s) base -->
+
+<p class="w3-panel w3-red w3-padding w3-hide">
+    search
+</p>
+<header class="w3-container w3-padding" id="myHeader">
+    <div class="w3-center">
+        <h4 class="w3-animate-top"></h4>
+    </div>
+</header>
+
+        
+         
+                <!-- do nothing -->
+            
+
+        <!-- BLOG POSTS ONLY -->
+         <div class="w3-container">
             <h1>Staff</h1>
 
 <ul>
   
     <li>
-      <h2><a href="/authors/jill">Jill Smith</a></h2>
+      <h2><a href="/authors/jill.html">Jill Smith</a></h2>
       <h3>Chief Editor</h3>
       <p><p>Jill is an avid fruit grower based in the south of France.</p>
 </p>
     </li>
   
     <li>
-      <h2><a href="/authors/ted">Ted Doe</a></h2>
+      <h2><a href="/authors/ted.html">Ted Doe</a></h2>
       <h3>Writer</h3>
       <p><p>Ted has been eating fruit since he was baby.</p>
 </p>
@@ -91,12 +90,14 @@
   
 </ul>
         </div>
-    </div>
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-16">
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-                class="w3-hover-text-green">w3.css</a></p>
-    </footer>
-</body>
+        
 
+        <!-- Footer -->
+<div class="footer w3-light-grey w3-tiny w3-border-top w3-border-light-gray w3-padding-small" >
+  <script>document.write("<p>&copy; 2016 - " + new Date().getFullYear() + " junlee</p>");</script>
+</div>
+    </div>
+    <script src="/assets/js/defbody.js"></script>
+     
+</body>
 </html>
