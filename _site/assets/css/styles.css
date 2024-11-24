@@ -1,13 +1,15 @@
-#top3 .w3-third {margin-top: 8px}
+/** w3css fix **/
+#top3 .w3-third{margin-top:8px}
+.w3-top,.w3-content{max-width:1100px}
+.w3-theme-l4{color:#000!important;background-color:#dfe5e8!important}
+.w3-theme-d4{color:#fff!important;background-color:#3a4b53!important}
+.w3-theme{color:#fff!important;background-color:#607d8b!important}
+.w3-text-theme{color:#607d8b!important}
+.w3-border-theme{border-color:#607d8b!important}
+.w3-hover-theme:hover{color:#fff!important;background-color:#607d8b!important}
+.w3-hover-text-theme:hover{color:#607d8b!important}
+.w3-hover-border-theme:hover{border-color:#607d8b!important}
 
-.w3-top,.w3-content {max-width: 1100px}
-.w3-theme-l4 {color: #000 !important;background-color: #dfe5e8 !important}
-.w3-theme-d4 {color: #fff !important;background-color: #3a4b53 !important}
-.w3-theme {color: #fff !important;background-color: #607d8b !important}
-.w3-text-theme {color: #607d8b !important}
-.w3-border-theme {border-color: #607d8b !important}
-.w3-hover-theme:hover {color: #fff !important;background-color: #607d8b !important}
-.w3-hover-text-theme:hover {color: #607d8b !important}
-.w3-hover-border-theme:hover {border-color: #607d8b !important}
 
-.footer {background-color:#bdc3c7!important;left: 0;bottom: 0;width: 100%;text-align: center;}
+/* bootstrap start style */
+.list-group-item:not(.list-group-item-secondary):hover{background-color:#6c757d;color:#fff;cursor:pointer}.list-group-item{transition:background-color .3s,color .3s}

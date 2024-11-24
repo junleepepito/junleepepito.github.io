@@ -2,28 +2,32 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% seo %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <!--  feed_meta  -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<!--  feed_meta  -->
 </head>
 
 <body class="w3-theme-l4">
     {% include sidenav.html %}
     <!-- Content -->
-    <div class="w3-content" style="max-width:1100px">
+    <div class="w3-content">
         
         {% include navigation.html %}
         {% include header.html %}
 
-        {% assign handle = "hide" %}
+        {% assign handle = "show" %}
         {% case handle %}
-            {% when "hide" %} 
-                <!-- do nothing -->
+            {% when "show" %} 
+                <!-- show modules -->
+                {% include header_top3.html %}
+                
             {% else %}
+                <!-- hidden modules -->
                 {% include header_modal.html %}
                 {% include header_top3.html %}
             <div class="w3-container">
@@ -50,9 +54,8 @@
             {{ content }}
         </div>
         
-
-        {% include footer.html %}
     </div>
+    {% include footer.html %}
     <script src="/assets/js/defbody.js"></script>
      
 </body>

@@ -4,9 +4,9 @@
 - name: Posts
   icon: pencil-square-o
   link: /blog
-- name: Rss
-  icon: rss
-  link: /atom.xml
+- name: BS
+  icon: plane
+  link: /bs
 # - name: Github
 #   icon: github
 #   link: //github.com/junleepepito/junleepepito.github.io

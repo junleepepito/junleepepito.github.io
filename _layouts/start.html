@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head><script src="/assets/js/color-modes.js"></script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="col-lg-8 mx-auto p-4 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <div class="spinner-grow text-info spinner-grow-sm m-2" role="status"><span class="visually-hidden">Loading...</span></div>
+        <span class="fs-4">JUNLEE</span>
+    </header>
+    
+    <main>
+        <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="col-md-4 themed-grid-col text-center">
+                    <p class="fs-4">mga himaya sa hunahuna</p>
+                    <button id="gcash-button" type="button" class="btn btn-outline-primary">
+                        Modawat kog GCash!<br/>Scan below!
+                    </button>
+                    <img src="/assets/images/gcash.png" class="img-fluid" alt="GCash QR Code">
+                </div>
+                <div class="col-md-8 themed-grid-col">
+                    <div class="card">
+                        <div class="card-header p-3">
+                            Recent Posts
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            {% for post in site.posts limit:10 %}
+                            <a href="{{ site.baseurl }}{{ post.url }}" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">{{ post.title }}</p>
+                                <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time></small>
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="container-fluid {% if page.hide == 1 %}d-none{% endif %}">
+            <hr class="my-4">
+            <div class="alert alert-secondary" role="alert">Old projects</div>
+            
+            <div class="row" data-masonry='{"percentPosition": true }'>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                        <div class="card-body">
+                        <h5 class="card-title">Card title that wraps to a new line</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card p-3">
+                        <figure class="p-3 mb-0">
+                        <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-body-secondary">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card text-bg-primary text-center p-3">
+                        <figure class="mb-0">
+                        <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-white">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card p-3 text-end">
+                        <figure class="mb-0">
+                        <blockquote class="blockquote"><p>A well-known quote, contained in a blockquote element.</p></blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-body-secondary">Someone famous in <cite title="Source Title">Source Title</cite></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </main>
+  <footer class="pt-5 my-5 text-body-secondary border-top">junleepepito &copy; 2024</footer>
+</div>
+
+
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script {% if page.hide == 1 %}class="d-none"{% endif %} async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+</body>
+</html>

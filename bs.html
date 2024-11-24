@@ -1,0 +1,12 @@
+---
+layout: db
+title: Blog
+---
+<h1>Latest Posts</h1>
+
+
+{% for post in site.posts %}
+<div class="w3-panel w3-border w3-hover-border-black">
+  <p><time class="w3-tiny w3-tag w3-blue-grey" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+</div>
+{% endfor %}

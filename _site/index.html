@@ -1,85 +1,226 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head><script src="/assets/js/color-modes.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Home</title>
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Home" />
 <meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Home" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"Home","url":"/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","headline":"Home","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <!--  feed_meta  -->
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+<!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/styles.css" rel="stylesheet">
+
 </head>
-
-<body class="w3-theme-l4">
-    <!-- Side Navigation -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
-    <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
-    <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button">Link 4</a>
-</nav>
-    <!-- Content -->
-    <div class="w3-content" style="max-width:1100px">
-        
-        <div class="w3-top w3-theme-d4">
-    <div class="w3-bar">
-        <!-- 
-        <a href="/search" class="w3-bar-item w3-button w3-right w3-hover-theme w3-tooltip"><span
-                class="w3-text">Search</span> <i class="fa fa-search"></i></a> -->
-        
-        <a href="/" class="w3-bar-item w3-button w3-hover-theme w3-tooltip  w3-blue-grey "><i class="fa fa-home"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Home</span></a>
-        
-        <a href="/blog" class="w3-bar-item w3-button w3-hover-theme w3-tooltip "><i class="fa fa-pencil-square-o"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Posts</span></a>
-        
-        <a href="/atom.xml" class="w3-bar-item w3-button w3-hover-theme w3-tooltip "><i class="fa fa-rss"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Rss</span></a>
-        
-        <a href="/search" class="w3-bar-item w3-button w3-hover-theme w3-tooltip  w3-right "><i class="fa fa-search"></i> <span style="position:absolute;left:0px;width: 100%;" class="w3-text w3-tag w3-tiny w3-black w3-margin-top">Search</span></a>
-        
-    </div>
-</div>
-<br /><br />
-        <!-- Header(s) base -->
-
-<p class="w3-panel w3-red w3-padding w3-hide">
-    home/
-</p>
-<header class="w3-container w3-padding" id="myHeader">
-    <div class="w3-center">
-        <h4 class="w3-animate-top">Mga himaya sa hunahuna..</h4>
-    </div>
-</header>
-
-        
-         
-                <!-- do nothing -->
-            
-
-        <!-- BLOG POSTS ONLY -->
-         <div class="w3-container">
+<body>
+<div class="col-lg-8 mx-auto p-4 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <div class="spinner-grow text-info spinner-grow-sm m-2" role="status"><span class="visually-hidden">Loading...</span></div>
+        <span class="fs-4">JUNLEE</span>
+    </header>
+    
+    <main>
+        <div class="container-fluid">
+            <div class="row mb-3">
+                <div class="col-md-4 themed-grid-col text-center">
+                    <p class="fs-4">mga himaya sa hunahuna</p>
+                    <button id="gcash-button" type="button" class="btn btn-outline-primary">
+                        Modawat kog GCash!<br/>Scan below!
+                    </button>
+                    <img src="/assets/images/gcash.png" class="img-fluid" alt="GCash QR Code">
+                </div>
+                <div class="col-md-8 themed-grid-col">
+                    <div class="card">
+                        <div class="card-header p-3">
+                            Recent Posts
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            
+                            <a href="/2019/04/02/1.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">1</p>
+                                <small><time datetime="2019-04-02T00:00:00+08:00">Apr 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/04/02/000.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">000</p>
+                                <small><time datetime="2019-04-02T00:00:00+08:00">Apr 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/03/02/3.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">3</p>
+                                <small><time datetime="2019-03-02T00:00:00+08:00">Mar 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/03/02/2.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">2</p>
+                                <small><time datetime="2019-03-02T00:00:00+08:00">Mar 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/02/02/6.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">6</p>
+                                <small><time datetime="2019-02-02T00:00:00+08:00">Feb 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/02/02/5.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">5</p>
+                                <small><time datetime="2019-02-02T00:00:00+08:00">Feb 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/02/02/4.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">4</p>
+                                <small><time datetime="2019-02-02T00:00:00+08:00">Feb 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/01/02/9.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">9</p>
+                                <small><time datetime="2019-01-02T00:00:00+08:00">Jan 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/01/02/8.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">8</p>
+                                <small><time datetime="2019-01-02T00:00:00+08:00">Jan 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                            <a href="/2019/01/02/7.html" class="list-group-item list-group-item-action" aria-current="true">
+                                <div class="d-flex w-100 justify-content-between">
+                                <p class="mb-1">7</p>
+                                <small><time datetime="2019-01-02T00:00:00+08:00">Jan 02, 2019</time></small>
+                                </div>
+                            </a>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
             
         </div>
         
-
-        <!-- Footer -->
-<div class="footer w3-light-grey w3-tiny w3-border-top w3-border-light-gray w3-padding-small" style="position: fixed;">
-  <script>document.write("<p>&copy; 2016 - " + new Date().getFullYear() + " junlee</p>");</script>
+        <div class="container-fluid d-none">
+            <hr class="my-4">
+            <div class="alert alert-secondary" role="alert">Old projects</div>
+            
+            <div class="row" data-masonry='{"percentPosition": true }'>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                        <div class="card-body">
+                        <h5 class="card-title">Card title that wraps to a new line</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card p-3">
+                        <figure class="p-3 mb-0">
+                        <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-body-secondary">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
+                        <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card text-bg-primary text-center p-3">
+                        <figure class="mb-0">
+                        <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-white">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card p-3 text-end">
+                        <figure class="mb-0">
+                        <blockquote class="blockquote"><p>A well-known quote, contained in a blockquote element.</p></blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-body-secondary">Someone famous in <cite title="Source Title">Source Title</cite></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </main>
+  <footer class="pt-5 my-5 text-body-secondary border-top">junleepepito &copy; 2024</footer>
 </div>
-    </div>
-    <script src="/assets/js/defbody.js"></script>
-     
+
+
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script class="d-none" async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
 </body>
 </html>
