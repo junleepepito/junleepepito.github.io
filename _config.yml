@@ -1,3 +1,7 @@
+title: "@junee"
+description: mga himaya sa huna-huna.
+github_username: junleepepito
+
 collections:
   authors:
     output: true
@@ -7,13 +11,21 @@ defaults:
       path: ""
       type: "authors"
     values:
-      layout: "author"
+      layout: "default"
+
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+
   - scope:
       path: ""
     values:
       layout: "default"
+
+# ✅ Allow Jekyll to process files in the _pages folder
+include:
+  - _pages
+
+permalink: /:categories/:year/:month/:day/:title/

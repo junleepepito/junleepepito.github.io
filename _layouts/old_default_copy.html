@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% seo %}
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<!--  feed_meta  -->
+</head>
+
+<body class="w3-theme-l4">
+    {% include sidenav.html %}
+    <!-- Content -->
+    <div class="w3-content">
+        
+        {% include navigation.html %}
+        {% include header.html %}
+
+        {% assign handle = "show" %}
+        {% case handle %}
+            {% when "show" %} 
+                <!-- show modules -->
+                {% include header_top3.html %}
+                
+            {% else %}
+                <!-- hidden modules -->
+                {% include header_modal.html %}
+                {% include header_top3.html %}
+            <div class="w3-container">
+                {% include jheader_color.html %}
+                {% include jheader_concon.html %}
+                {% include jheader_color_theme.html %}
+                {% include ppr_image.html %}
+                {% include ppr_table_form.html %}
+            </div>
+                {% include ppr_afterform.html %}
+                {% include progbar_start.html %}
+            <div class="w3-container">
+                {% include progbar_slide_manual.html %}
+                {% include progbar_slide_auto.html %}
+            </div>
+            <div class="w3-container">
+                {% include nav_acc_tabs.html %}
+            </div>
+            {% include foot_pagination.html %}
+        {% endcase %}
+
+        <!-- BLOG POSTS ONLY -->
+         <div class="w3-container">
+            {{ content }}
+        </div>
+        
+    </div>
+    {% include footer.html %}
+    <script src="/assets/js/defbody.js"></script>
+     
+</body>
+</html>

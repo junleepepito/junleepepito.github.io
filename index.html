@@ -1,7 +1,75 @@
 ---
-layout: start
+layout: default
 title: Home
 slogan: "Mga himaya sa hunahuna.."
-# hide masonry below
-hide: 1
 ---
+
+<main class="container my-4">
+
+  <!-- Slogan -->
+  <!-- <h1 class="mb-4">{{ page.slogan }}</h1> -->
+
+  <!-- Bootstrap Post Cards Grid -->
+  <div class="row g-3 mb-5">
+    {% for post in site.posts %}
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              {{ post.date | date: "%B %d, %Y" }}
+            </small>
+            <h5 class="card-title">
+              <a href="{{ post.url | relative_url }}" class="text-decoration-none fw-semibold">
+                {{ post.title }}
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              {{ post.date | date: "%B %d, %Y" }}
+            </small> -->
+            <p class="card-text small text-muted">
+              {{ post.excerpt | strip_html | truncatewords: 20 }}
+            </p>
+            {% if post.tags %}
+            <div class="mt-2">
+              {% for tag in post.tags %}
+                <span class="badge bg-light text-dark border">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</main>
+
+<!-- Floating Action Button (FAB) -->
+<button id="backToTopBtn"
+   onclick="scrollToTop()" 
+   class="btn btn-primary rounded-circle position-fixed shadow"
+   style="bottom: 2rem; right: 2rem; width: 3rem; height: 3rem; display:flex; align-items:center; justify-content:center; display:none;"
+   title="Back to top">
+  ↑
+</button>
+
+<script>
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+window.addEventListener("scroll", function() {
+  const btn = document.getElementById("backToTopBtn");
+  if (window.scrollY > 200) {
+    btn.style.display = "flex";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>

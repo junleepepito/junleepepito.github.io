@@ -1,18 +1,27 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
 
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
-</p>
+<section class="mb-4">
+  <h2 class="mb-1">{{ page.title }}</h2>
+  <div class="muted small mb-3">
+    {{ page.date | date: "%B %d, %Y" }}
+    {% assign author = site.authors | where: 'short_name', page.author | first %}
+    {% if author %}
+      · <a href="{{ author.url }}" class="text-decoration-none">{{ author.name }}</a>
+    {% endif %}
+  </div>
 
-{{ content }}
+  <div class="content-shell mb-4">
+    {{ content }}
+  </div>
 
-<h1>post comments?</h1>
-
-{% include comments_utterances.html %}
+  <div class="mt-5">
+    <h6 class="mb-2">Comments</h6>
+    {% if page.comments == false %}
+      <p class="text-muted fst-italic">Comments are disabled for this post.</p>
+    {% else %}
+      {% include comments_utterances.html %}
+    {% endif %}
+  </div>
+</section>

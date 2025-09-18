@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ChatGPT-style Code Viewer with Div</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2/css/pico.min.css" />
+  <style>
+    .code-block {
+      position: relative;
+      border: 1px solid var(--pico-border-color);
+      border-radius: var(--pico-border-radius);
+      padding: 0.5rem 1rem 1rem;
+      background-color: var(--pico-code-background-color, #f8f9fa);
+    }
+
+    .copy-bar {
+      display: flex;
+      justify-content: flex-end;
+      position: sticky;
+      top: 0;
+      /* background-color: var(--pico-code-background-color, #f8f9fa); */
+      z-index: 5;
+      padding: 0.5rem 0;
+      margin-bottom: 0.25rem;
+    }
+    .copy-button:hover {
+      background: red!important;
+    }
+
+    .copy-button {
+      /* background: var(--pico-primary-color);
+      color: white; */
+      border: none;
+      border-radius: 4px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .copy-button:hover {
+      background: var(--pico-primary-color-dark);
+    }
+
+    .code-viewer.small {
+      font-size: 12px;
+    } 
+    .code-viewer {
+      max-height: 100%;
+      /* max-height: 330px; */
+      overflow: auto;
+      font-family: monospace;
+      white-space: pre-wrap;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    
+    <h1 id="reload-timer">Reloading in 5s</h1>
+
+<script nonce="lsXX7pREJ5FhsgRe76QsIA">
+  window.addEventListener("load", function () {
+    let countdown = 55; // in seconds
+    const heading = document.getElementById("reload-timer");
+
+    const interval = setInterval(function () {
+      countdown--;
+      heading.textContent = `Reloading in ${countdown}s`;
+
+      if (countdown === 0) {
+        clearInterval(interval);
+        location.reload();
+      }
+    }, 1000);
+  });
+</script>
+
+    
+    <div class="grid">
+      <div>
+        <iframe src="https://www.blogger.com/profile/10455361509275539347" width="380" height="420" frameborder="0"></iframe>
+      </div>
+      <div>
+        <iframe src="https://www.blogger.com/profile/16450829622967946983" width="380" height="420" frameborder="0"></iframe>
+      </div>
+      <div>
+        <iframe src="https://www.blogger.com/profile/10455361509275539347" width="380" height="420" frameborder="0"></iframe>
+      </div>
+    </div>
+    <a href="https://info.flagcounter.com/uIZ3"><img src="https://s01.flagcounter.com/mini/uIZ3/bg_FFFFFF/txt_000000/border_CCCCCC/flags_0/" alt="Free counters!" border="0"></a>
+
+  </main>
+  
+
+</body>
+</html>
+
+nonce-cuOTrJz9rKm6DO2DbZo8RA
+nonce-IN-DrP0hfOIAcqkK13X8yA
+nonce-09ZFUuxI5zmKGd2p88wGEA
+

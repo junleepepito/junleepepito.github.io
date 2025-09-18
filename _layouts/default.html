@@ -1,62 +1,115 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% seo %}
-<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="stylesheet" href="/assets/css/styles.css">
-<!--  feed_meta  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+
+  <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Icons (Bootstrap Icons CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --gh-bg: #f6f8fa;
+      --gh-surface: #ffffff;
+      --gh-muted: #6a737d;
+      --gh-border: #e1e4e8;
+      --gh-accent: #2f81f7;
+      --container-max: 1100px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{background: var(--gh-bg);color: #24292e;min-height: 100vh;}
+    .gh-topnav{background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));border-bottom: 1px solid var(--gh-border);backdrop-filter: blur(4px);}
+    .gh-logo{font-weight: 600;color: #24292e;letter-spacing: -0.5px;}
+    .gh-page{max-width: var(--container-max);margin: 24px auto;}
+    .gh-side{background: var(--gh-surface);border: 1px solid var(--gh-border);border-radius: 6px;padding: 12px;font-size: 14px;}
+    .repo-header{background: transparent;padding: 12px 0;display:flex;align-items:center;gap:12px;}
+    .repo-badge{border-radius:6px;padding:4px 8px;font-size:12px;background:#f1f8ff;color:var(--gh-accent);border:1px solid rgba(47,129,247,0.12)}
+    .file-list .list-group-item{border: 1px solid var(--gh-border);border-radius:6px;margin-bottom:8px;}
+    .content-shell{background: var(--gh-surface);color: inherit;border: 1px solid var(--gh-border);border-radius:6px;padding:16px;font-size:15px;line-height:1.6;}
+    .muted{color:var(--gh-muted);}
+    @media (max-width: 991px){.gh-page{padding:0 12px}.repo-header{flex-wrap:wrap}}
+
+    .hide {display: none!important;}
+  </style>
 </head>
+<body>
 
-<body class="w3-theme-l4">
-    {% include sidenav.html %}
-    <!-- Content -->
-    <div class="w3-content">
-        
-        {% include navigation.html %}
-        {% include header.html %}
+  <!-- Top navigation -->
+  <nav class="gh-topnav navbar navbar-expand-lg py-2">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-        {% assign handle = "show" %}
-        {% case handle %}
-            {% when "show" %} 
-                <!-- show modules -->
-                {% include header_top3.html %}
-                
-            {% else %}
-                <!-- hidden modules -->
-                {% include header_modal.html %}
-                {% include header_top3.html %}
-            <div class="w3-container">
-                {% include jheader_color.html %}
-                {% include jheader_concon.html %}
-                {% include jheader_color_theme.html %}
-                {% include ppr_image.html %}
-                {% include ppr_table_form.html %}
-            </div>
-                {% include ppr_afterform.html %}
-                {% include progbar_start.html %}
-            <div class="w3-container">
-                {% include progbar_slide_manual.html %}
-                {% include progbar_slide_auto.html %}
-            </div>
-            <div class="w3-container">
-                {% include nav_acc_tabs.html %}
-            </div>
-            {% include foot_pagination.html %}
-        {% endcase %}
+      <!-- Left side (brand placeholder) -->
+      <div class="d-flex align-items-center">
+        <!-- <a class="navbar-brand gh-logo d-flex align-items-center gap-2" href="{{ site.baseurl }}/">
+          <svg height="24" width="24" viewBox="0 0 16 16" aria-hidden="true"><path fill="#24292e" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59...z"></path></svg>
+          <span>{{ site.title }}</span>
+        </a> -->
+      </div>
 
-        <!-- BLOG POSTS ONLY -->
-         <div class="w3-container">
-            {{ content }}
-        </div>
-        
+      <!-- Centered search -->
+      <form class="d-none d-md-flex input-group mx-auto hide" style="max-width:420px;">
+        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+        <input class="form-control border-start-0" type="search" placeholder="Search or jump to...">
+      </form>
+
+      <!-- Right side (links placeholder) -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- <a class="nav-link d-none d-lg-inline muted" href="{{ site.baseurl }}/pulls">Pull requests</a> -->
+        <!-- <a class="nav-link d-none d-lg-inline muted" href="{{ site.baseurl }}/issues">Issues</a> -->
+        <!-- <a class="nav-link d-none d-lg-inline muted" href="{{ site.baseurl }}/marketplace">Marketplace</a> -->
+        <!-- <button class="btn btn-outline-secondary btn-sm d-none d-lg-inline">New</button> -->
+      </div>
     </div>
-    {% include footer.html %}
-    <script src="/assets/js/defbody.js"></script>
-     
+  </nav>
+
+  <!-- Page body -->
+  <main class="gh-page container">
+    <div class="repo-header">
+      <div class="d-flex align-items-center">
+        <h4 class="mb-0"><a href="/">{{ site.github_username | default: "username" }}.github.io</a> / 
+          <!-- <strong>{{ site.title }}</strong> -->
+        </h4>
+        <!-- <span class="repo-badge ms-3">Latest update {{ site.time | date: "%b %d, %Y" }}</span> -->
+        <!-- <span class="repo-badge ms-3">Public</span> -->
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <aside class="col-lg-3 mb-3">
+        <div class="gh-side">
+          <h6 class="mb-2">++</h6>
+          <div class="list-unstyled small">
+            <div class="mb-2"><strong class="me-2">+</strong>
+              <br/><span class="muted">· latest commit {{ site.time | date: "%b %d, %Y" }}</span></div>
+            {% for file in site.static_files %}
+              <div class="mb-2"><a href="{{ file.path }}" class="d-inline-block">{{ file.name }}</a></div>
+            {% endfor %}
+          </div>
+          <hr>
+          <div class="small muted">+ + +</div>
+          <p class="small">{{ site.description }}</p>
+        </div>
+      </aside>
+
+      <section class="col-lg-9">
+        <div class="mb-3">
+          <!-- <h5>{{ page.title | default: "README" }}</h5> -->
+          <!-- <div class="muted small mb-2">Latest update {{ site.time | date: "%b %d, %Y" }}</div> -->
+          <div class="content-shell">
+            <!-- <div class="muted small mb-2">Latest update {{ site.time | date: "%b %d, %Y" }}</div> -->
+            {{ content }}
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

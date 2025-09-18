@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Playlist Generator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+
+  <header class="container">
+    <h1>Playlist HTML Generator</h1>
+    <p>Paste your playlist below to generate a clean HTML block with 128kbps bitrate note.</p>
+  </header>
+
+  <main class="container">
+
+    <h2>Generate HTML Playlist</h2>
+
+    <label for="trackInput">Enter playlist (one line per song):</label>
+    <textarea id="trackInput" rows="6" placeholder="Princess - Bad Romance (4:09)"></textarea>
+
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+      <button onclick="generatePlaylist()">Generate HTML</button>
+      <button class="secondary" onclick="clearTextbox()">Clear</button>
+    </div>
+
+    <section id="outputSection" class="d-none">
+      <h3>Generated HTML:</h3>
+      <pre id="output" class="contrast"></pre>
+      <button id="copyButton" class="secondary" onclick="copyToClipboard()">Copy to Clipboard</button>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <small>© 2025 Playlist Generator. Built with Pico CSS.</small>
+  </footer>
+
+  <script>
+    function generatePlaylist() {
+      const rawText = document.getElementById("trackInput").value.trim();
+      const outputSection = document.getElementById("outputSection");
+      const output = document.getElementById("output");
+
+      // Reset state
+      output.textContent = "";
+      outputSection.classList.add("d-none");
+
+      if (!rawText) return;
+
+      const lines = rawText.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+      if (lines.length === 0) return;
+
+      const bitrateRegex = /~(\d+)kbps/;
+
+      const processedTracks = lines.map(line => {
+        const cleanLine = line.replace(/^\d+\.\s*/, '');
+        const cleanedDisplay = cleanLine.replace(bitrateRegex, '').trim();
+        return {
+          display: cleanedDisplay
+        };
+      });
+
+      let html = `<blockquote style="background-color: antiquewhite;">
+  <strong>VBR V3</strong>
+</blockquote>
+
+<blockquote><p>&#128161; Tip: This archive uses VBR encoding. <br/>&#128073; VBR Summary info below the playlist files.</p></blockquote>
+
+<blockquote>
+  <span class="header" style="font-weight: bold;">Playlist files:</span>
+  <ol>
+`;
+
+      processedTracks.forEach(track => {
+        html += `    <li>${track.display}<br></li>\n`;
+      });
+
+      html += `  </ol>
+</blockquote>
+<hr/>
+<table style="max-width:360px; width:100%; border-collapse:collapse;">
+<thead>
+<tr>
+<th style="text-align:left; padding:8px; background:#f0f0f0;">VBR Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding:8px; border-top:1px solid #ddd;">
+V0 - Best quality, largest file size (~245 kbps)<br/>
+— Music on high-quality headphones/speakers
+</td>
+</tr>
+<tr>
+<td style="padding:8px; border-top:1px solid #ddd;">
+V1 - Very high quality (~220 kbps)<br/>
+— Music on good audio setups
+</td>
+</tr>
+<tr>
+<td style="padding:8px; border-top:1px solid #ddd;">
+V2 - Good quality, balanced (~190 kbps)<br/>
+— General listening with good size/quality balance
+</td>
+</tr>
+<tr style="background-color: cornsilk;">
+<td style="padding:8px; border-top:1px solid #ddd;">
+V3 - Average quality (~170 kbps)<br/>
+— Space-saving with acceptable audio
+</td>
+</tr>
+<tr>
+<td style="padding:8px; border-top:1px solid #ddd;">
+V4 - Low quality (~150 kbps)<br/>
+— Speech or casual listening
+</td>
+</tr>
+<tr>
+<td style="padding:8px; border-top:1px solid #ddd;">
+V5 - Lowest quality (~130 kbps)<br/>
+— Podcasts, voice notes, or background audio
+</td>
+</tr>
+</tbody>
+</table>`;
+
+      // Replace multiple spaces with a single space
+      html = html.replace(/ {2,}/g, ' ');
+
+      output.textContent = html;
+      outputSection.classList.remove("d-none");
+    }
+
+    function clearTextbox() {
+      document.getElementById("trackInput").value = "";
+      document.getElementById("output").textContent = "";
+      document.getElementById("outputSection").classList.add("d-none");
+    }
+
+    function copyToClipboard() {
+      const output = document.getElementById("output");
+      const text = output.textContent;
+
+      if (!text.trim()) return;
+
+      navigator.clipboard.writeText(text).then(() => {
+        alert("HTML copied to clipboard!");
+      }).catch(err => {
+        alert("Failed to copy: " + err);
+      });
+    }
+  </script>
+
+</body>
+
+</html>

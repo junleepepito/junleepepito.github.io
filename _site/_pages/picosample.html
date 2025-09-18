@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Theme Toggle</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    #themeToggle {
+      font-size: 1.5rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .block-center {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+    <!-- Theme Toggle Section -->
+    <section>
+      <a href="#" id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+      </a>
+    </section>
+
+    <!-- Sample Header -->
+    <header>
+      <h1>Welcome to My Website</h1>
+      <p>This is a sample header section below the theme toggle.</p>
+    </header>
+
+    <!-- Other Content -->
+    <section>
+      <h2>About This Page</h2>
+      <p>This section contains more content. The theme toggle works above.</p>
+    </section>
+
+    <!-- Bandcamp Embed Section -->
+
+    <div class="grid">
+      <div>
+        <article>
+          <header>Header</header>
+          <iframe class="block-center" style="border: 0; width: 308px; height: 400px;"
+            src="https://bandcamp.com/EmbeddedPlayer/track=3702301342/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+            seamless><a href="https://kurei.bandcamp.com/track/intheclub-3">intheclub&lt;3 by KUREI</a></iframe>
+          <ul>
+            <li><a href="#">Primary</a></li>
+            <li><a href="#" class="secondary">Secondary</a></li>
+            <li><a href="#" class="contrast">Contrast</a></li>
+          </ul>
+          <footer>Footer</footer>
+        </article>
+      </div>
+      <div>
+        <article>
+          <header>Header</header>
+          <iframe class="block-center" style="border: 0; width: 308px; height: 400px;"
+            src="https://bandcamp.com/EmbeddedPlayer/track=3702301342/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+            seamless><a href="https://kurei.bandcamp.com/track/intheclub-3">intheclub&lt;3 by KUREI</a></iframe>
+          <ul>
+            <li><a href="#">Primary</a></li>
+            <li><a href="#" class="secondary">Secondary</a></li>
+            <li><a href="#" class="contrast">Contrast</a></li>
+          </ul>
+          <footer>Footer</footer>
+        </article>
+      </div>
+      <div>
+        <article>
+          <header>Header</header>
+          <iframe class="block-center" style="border: 0; width: 308px; height: 400px;"
+            src="https://bandcamp.com/EmbeddedPlayer/track=3702301342/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+            seamless><a href="https://kurei.bandcamp.com/track/intheclub-3">intheclub&lt;3 by KUREI</a></iframe>
+          <ul>
+            <li><a href="#">Primary</a></li>
+            <li><a href="#" class="secondary">Secondary</a></li>
+            <li><a href="#" class="contrast">Contrast</a></li>
+          </ul>
+          <footer>Footer</footer>
+        </article>
+      </div>
+    </div>
+
+
+  </main>
+
+  <!-- Sample Footer -->
+  <footer class="container">
+    <hr>
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+    <p><a href="https://info.flagcounter.com/uIZ3"><img src="https://s01.flagcounter.com/count/uIZ3/bg_FFFFFF/txt_000000/border_CCCCCC/columns_4/maxflags_250/viewers_3/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></p>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggle = document.getElementById("themeToggle");
+    const icon = toggle.querySelector("i");
+
+    function updateIcon() {
+      const isDark = root.getAttribute("data-theme") === "dark";
+      icon.className = isDark ? "fas fa-moon" : "fas fa-sun";
+    }
+
+    toggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      const currentTheme = root.getAttribute("data-theme");
+      root.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+      updateIcon();
+    });
+
+    document.addEventListener("DOMContentLoaded", updateIcon);
+  </script>
+
+</body>
+
+</html>

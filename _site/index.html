@@ -1,226 +1,692 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
-<head><script src="/assets/js/color-modes.js"></script>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Home</title>
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="Home" />
-<meta property="og:locale" content="en_US" />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Home" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"Home","url":"http://localhost:4000/"}</script>
-<!-- End Jekyll SEO tag -->
+  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
-<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-<!-- <link href="/assets/css/bootstrap.min.css" rel="stylesheet"> -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="/assets/css/styles.css" rel="stylesheet">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+  <!-- Icons (Bootstrap Icons CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --gh-bg: #f6f8fa;
+      --gh-surface: #ffffff;
+      --gh-muted: #6a737d;
+      --gh-border: #e1e4e8;
+      --gh-accent: #2f81f7;
+      --container-max: 1100px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{background: var(--gh-bg);color: #24292e;min-height: 100vh;}
+    .gh-topnav{background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));border-bottom: 1px solid var(--gh-border);backdrop-filter: blur(4px);}
+    .gh-logo{font-weight: 600;color: #24292e;letter-spacing: -0.5px;}
+    .gh-page{max-width: var(--container-max);margin: 24px auto;}
+    .gh-side{background: var(--gh-surface);border: 1px solid var(--gh-border);border-radius: 6px;padding: 12px;font-size: 14px;}
+    .repo-header{background: transparent;padding: 12px 0;display:flex;align-items:center;gap:12px;}
+    .repo-badge{border-radius:6px;padding:4px 8px;font-size:12px;background:#f1f8ff;color:var(--gh-accent);border:1px solid rgba(47,129,247,0.12)}
+    .file-list .list-group-item{border: 1px solid var(--gh-border);border-radius:6px;margin-bottom:8px;}
+    .content-shell{background: var(--gh-surface);color: inherit;border: 1px solid var(--gh-border);border-radius:6px;padding:16px;font-size:15px;line-height:1.6;}
+    .muted{color:var(--gh-muted);}
+    @media (max-width: 991px){.gh-page{padding:0 12px}.repo-header{flex-wrap:wrap}}
+
+    .hide {display: none!important;}
+  </style>
 </head>
 <body>
-<div class="col-lg-8 mx-auto p-4 py-md-5">
-    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-        <div class="spinner-grow text-info spinner-grow-sm m-2" role="status"><span class="visually-hidden">Loading...</span></div>
-        <span class="fs-4">JUNLEE</span>
-    </header>
-    
-    <main>
-        <div class="container-fluid">
-            <div class="row mb-3">
-                <div class="col-md-4 themed-grid-col text-center">
-                    <p class="fs-4">mga himaya sa hunahuna</p>
-                    <button id="gcash-button" type="button" class="btn btn-outline-primary">
-                        Modawat kog GCash!<br/>Scan below!
-                    </button>
-                    <img src="/assets/images/gcash.png" class="img-fluid" alt="GCash QR Code">
-                </div>
-                <div class="col-md-8 themed-grid-col">
-                    <div class="card">
-                        <div class="card-header p-3">
-                            Recent Posts
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            
-                            <a href="/2019/04/02/1.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">1</p>
-                                <small><time datetime="2019-04-02T00:00:00+08:00">Apr 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/04/02/000.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">000</p>
-                                <small><time datetime="2019-04-02T00:00:00+08:00">Apr 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/03/02/3.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">3</p>
-                                <small><time datetime="2019-03-02T00:00:00+08:00">Mar 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/03/02/2.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">2</p>
-                                <small><time datetime="2019-03-02T00:00:00+08:00">Mar 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/02/02/6.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">6</p>
-                                <small><time datetime="2019-02-02T00:00:00+08:00">Feb 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/02/02/5.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">5</p>
-                                <small><time datetime="2019-02-02T00:00:00+08:00">Feb 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/02/02/4.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">4</p>
-                                <small><time datetime="2019-02-02T00:00:00+08:00">Feb 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/01/02/9.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">9</p>
-                                <small><time datetime="2019-01-02T00:00:00+08:00">Jan 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/01/02/8.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">8</p>
-                                <small><time datetime="2019-01-02T00:00:00+08:00">Jan 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                            <a href="/2019/01/02/7.html" class="list-group-item list-group-item-action" aria-current="true">
-                                <div class="d-flex w-100 justify-content-between">
-                                <p class="mb-1">7</p>
-                                <small><time datetime="2019-01-02T00:00:00+08:00">Jan 02, 2019</time></small>
-                                </div>
-                            </a>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
+  <!-- Top navigation -->
+  <nav class="gh-topnav navbar navbar-expand-lg py-2">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Left side (brand placeholder) -->
+      <div class="d-flex align-items-center">
+        <!-- <a class="navbar-brand gh-logo d-flex align-items-center gap-2" href="/">
+          <svg height="24" width="24" viewBox="0 0 16 16" aria-hidden="true"><path fill="#24292e" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59...z"></path></svg>
+          <span>@junee</span>
+        </a> -->
+      </div>
+
+      <!-- Centered search -->
+      <form class="d-none d-md-flex input-group mx-auto hide" style="max-width:420px;">
+        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
+        <input class="form-control border-start-0" type="search" placeholder="Search or jump to...">
+      </form>
+
+      <!-- Right side (links placeholder) -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- <a class="nav-link d-none d-lg-inline muted" href="/pulls">Pull requests</a> -->
+        <!-- <a class="nav-link d-none d-lg-inline muted" href="/issues">Issues</a> -->
+        <!-- <a class="nav-link d-none d-lg-inline muted" href="/marketplace">Marketplace</a> -->
+        <!-- <button class="btn btn-outline-secondary btn-sm d-none d-lg-inline">New</button> -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page body -->
+  <main class="gh-page container">
+    <div class="repo-header">
+      <div class="d-flex align-items-center">
+        <h4 class="mb-0"><a href="/">junleepepito.github.io</a> / 
+          <!-- <strong>@junee</strong> -->
+        </h4>
+        <!-- <span class="repo-badge ms-3">Latest update Sep 18, 2025</span> -->
+        <!-- <span class="repo-badge ms-3">Public</span> -->
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <aside class="col-lg-3 mb-3">
+        <div class="gh-side">
+          <h6 class="mb-2">++</h6>
+          <div class="list-unstyled small">
+            <div class="mb-2"><strong class="me-2">+</strong>
+              <br/><span class="muted">· latest commit Sep 18, 2025</span></div>
             
+              <div class="mb-2"><a href="/README.md" class="d-inline-block">README.md</a></div>
+            
+              <div class="mb-2"><a href="/_pages/em.html" class="d-inline-block">em.html</a></div>
+            
+              <div class="mb-2"><a href="/_pages/feedviewer.html" class="d-inline-block">feedviewer.html</a></div>
+            
+              <div class="mb-2"><a href="/_pages/gistsample.html" class="d-inline-block">gistsample.html</a></div>
+            
+              <div class="mb-2"><a href="/_pages/picosample.html" class="d-inline-block">picosample.html</a></div>
+            
+              <div class="mb-2"><a href="/_pages/playlist_generator.html" class="d-inline-block">playlist_generator.html</a></div>
+            
+              <div class="mb-2"><a href="/_pages/reloader.html" class="d-inline-block">reloader.html</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/bootstrap.min.css" class="d-inline-block">bootstrap.min.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/bootstrap.min.css.map" class="d-inline-block">bootstrap.min.css.map</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/dashboard.css" class="d-inline-block">dashboard.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/em.css" class="d-inline-block">em.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/m3/style.css" class="d-inline-block">style.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/main.css" class="d-inline-block">main.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/picocontent_script.css" class="d-inline-block">picocontent_script.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/picodocs-X4QYOAQA.css" class="d-inline-block">picodocs-X4QYOAQA.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/picomain-TS6CRX7I.css" class="d-inline-block">picomain-TS6CRX7I.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/styles.css" class="d-inline-block">styles.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/w3.css" class="d-inline-block">w3.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/css/w3pro.css" class="d-inline-block">w3pro.css</a></div>
+            
+              <div class="mb-2"><a href="/assets/images/favicon.ico" class="d-inline-block">favicon.ico</a></div>
+            
+              <div class="mb-2"><a href="/assets/images/gcash.png" class="d-inline-block">gcash.png</a></div>
+            
+              <div class="mb-2"><a href="/assets/js/bootstrap.bundle.min.js" class="d-inline-block">bootstrap.bundle.min.js</a></div>
+            
+              <div class="mb-2"><a href="/assets/js/bootstrap.bundle.min.js.map" class="d-inline-block">bootstrap.bundle.min.js.map</a></div>
+            
+              <div class="mb-2"><a href="/assets/js/cheatsheet.js" class="d-inline-block">cheatsheet.js</a></div>
+            
+              <div class="mb-2"><a href="/assets/js/color-modes.js" class="d-inline-block">color-modes.js</a></div>
+            
+              <div class="mb-2"><a href="/assets/js/dashboard.js" class="d-inline-block">dashboard.js</a></div>
+            
+              <div class="mb-2"><a href="/assets/js/defbody.js" class="d-inline-block">defbody.js</a></div>
+            
+          </div>
+          <hr>
+          <div class="small muted">+ + +</div>
+          <p class="small">mga himaya sa huna-huna.</p>
         </div>
-        
-        <div class="container-fluid d-none">
-            <hr class="my-4">
-            <div class="alert alert-secondary" role="alert">Old projects</div>
+      </aside>
+
+      <section class="col-lg-9">
+        <div class="mb-3">
+          <!-- <h5>Home</h5> -->
+          <!-- <div class="muted small mb-2">Latest update Sep 18, 2025</div> -->
+          <div class="content-shell">
+            <!-- <div class="muted small mb-2">Latest update Sep 18, 2025</div> -->
+            <main class="container my-4">
+
+  <!-- Slogan -->
+  <!-- <h1 class="mb-4">Mga himaya sa hunahuna..</h1> -->
+
+  <!-- Bootstrap Post Cards Grid -->
+  <div class="row g-3 mb-5">
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              September 15, 2025
+            </small>
+            <h5 class="card-title">
+              <a href="/backups/2025/09/15/bkup-win-auth/" class="text-decoration-none fw-semibold">
+                win-auth-bkup
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              September 15, 2025
+            </small> -->
+            <p class="card-text small text-muted">
+              IX2W-4NYM-PIEJ-4LRS
+CHMS-GVUV-YQFT-CFZF
+0MPS-ZV15-OFJM-HOVY
+WA8L-DK5L-ENNL-J20L
+8R5W-8AEW-XHRO-2KNZ
+8YKL-SXQE-8RUZ-GWN5
+7ZTR-DMZ5-TF0I-H4W5
+WLJP-KNN1-4L4I-MBOK
+12WV-DJDN-6QP3-VDZ0
+D7EH-NOHP-80ED-DI3P
+
+
+            </p>
             
-            <div class="row" data-masonry='{"percentPosition": true }'>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                        <h5 class="card-title">Card title that wraps to a new line</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card p-3">
-                        <figure class="p-3 mb-0">
-                        <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                        </blockquote>
-                        <figcaption class="blockquote-footer mb-0 text-body-secondary">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                        </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image cap</text></svg>
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card text-bg-primary text-center p-3">
-                        <figure class="mb-0">
-                        <blockquote class="blockquote">
-                        <p>A well-known quote, contained in a blockquote element.</p>
-                        </blockquote>
-                        <figcaption class="blockquote-footer mb-0 text-white">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                        </figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card">
-                        <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card image</text>
-                        </svg>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card p-3 text-end">
-                        <figure class="mb-0">
-                        <blockquote class="blockquote"><p>A well-known quote, contained in a blockquote element.</p></blockquote>
-                        <figcaption class="blockquote-footer mb-0 text-body-secondary">Someone famous in <cite title="Source Title">Source Title</cite></figcaption>
-                        </figure>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="mt-2">
+              
             </div>
-        </div>    
-    </main>
-  <footer class="pt-5 my-5 text-body-secondary border-top">junleepepito &copy; 2024</footer>
-</div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/backups/2025/09/15/bkup-win-auth/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              September 13, 2025
+            </small>
+            <h5 class="card-title">
+              <a href="/2025/09/13/sample-modal/" class="text-decoration-none fw-semibold">
+                Sample Post with Bootstrap Lightbox Modal
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              September 13, 2025
+            </small> -->
+            <p class="card-text small text-muted">
+              
 
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2025/09/13/sample-modal/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              May 25, 2025
+            </small>
+            <h5 class="card-title">
+              <a href="/marvel/mcu/movies/2025/05/25/mcu-movie-list/" class="text-decoration-none fw-semibold">
+                Complete MCU Movie List (2008–2025)
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              May 25, 2025
+            </small> -->
+            <p class="card-text small text-muted">
+              The Marvel Cinematic Universe (MCU) is an interconnected series of superhero films produced by Marvel Studios. Below is the full...
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/marvel/mcu/movies/2025/05/25/mcu-movie-list/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              April 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/04/02/1/" class="text-decoration-none fw-semibold">
+                1
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              April 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              1111
 
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/04/02/1/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              April 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/04/02/000/" class="text-decoration-none fw-semibold">
+                000
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              April 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              base
 
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/04/02/000/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              March 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/03/02/3/" class="text-decoration-none fw-semibold">
+                3
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              March 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              3333
 
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/03/02/3/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              March 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/03/02/2/" class="text-decoration-none fw-semibold">
+                2
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              March 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              2222
 
-<script class="d-none" async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/03/02/2/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              February 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/02/02/6/" class="text-decoration-none fw-semibold">
+                6
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              February 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              six
+
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/02/02/6/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              February 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/02/02/5/" class="text-decoration-none fw-semibold">
+                5
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              February 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              five
+
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/02/02/5/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              February 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/02/02/4/" class="text-decoration-none fw-semibold">
+                4
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              February 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              four
+
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/02/02/4/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              January 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/01/02/9/" class="text-decoration-none fw-semibold">
+                9
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              January 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              9
+
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/01/02/9/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              January 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/01/02/8/" class="text-decoration-none fw-semibold">
+                8
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              January 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              8
+
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/01/02/8/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              January 02, 2019
+            </small>
+            <h5 class="card-title">
+              <a href="/2019/01/02/7/" class="text-decoration-none fw-semibold">
+                7
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              January 02, 2019
+            </small> -->
+            <p class="card-text small text-muted">
+              7
+
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2019/01/02/7/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              August 22, 2018
+            </small>
+            <h5 class="card-title">
+              <a href="/2018/08/22/kiwifruit/" class="text-decoration-none fw-semibold">
+                Kiwifruit
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              August 22, 2018
+            </small> -->
+            <p class="card-text small text-muted">
+              Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the...
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2018/08/22/kiwifruit/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              August 21, 2018
+            </small>
+            <h5 class="card-title">
+              <a href="/2018/08/21/apples/" class="text-decoration-none fw-semibold">
+                Apples
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              August 21, 2018
+            </small> -->
+            <p class="card-text small text-muted">
+              An apple is a sweet, edible fruit produced by an apple tree.
+
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2018/08/21/apples/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-4">
+        <div class="card h-100 border-light shadow-sm">
+          <div class="card-body">
+            <small class="text-muted d-block mb-2">
+              August 20, 2018
+            </small>
+            <h5 class="card-title">
+              <a href="/2018/08/20/bananas/" class="text-decoration-none fw-semibold">
+                Bananas
+              </a>
+            </h5>
+            <!-- <small class="text-muted d-block mb-2">
+              August 20, 2018
+            </small> -->
+            <p class="card-text small text-muted">
+              A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants...
+            </p>
+            
+            <div class="mt-2">
+              
+            </div>
+            
+          </div>
+          <div class="card-footer bg-white border-top-0">
+            <a href="/2018/08/20/bananas/" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+
+</main>
+
+<!-- Floating Action Button (FAB) -->
+<button id="backToTopBtn"
+   onclick="scrollToTop()" 
+   class="btn btn-primary rounded-circle position-fixed shadow"
+   style="bottom: 2rem; right: 2rem; width: 3rem; height: 3rem; display:flex; align-items:center; justify-content:center; display:none;"
+   title="Back to top">
+  ↑
+</button>
+
+<script>
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+window.addEventListener("scroll", function() {
+  const btn = document.getElementById("backToTopBtn");
+  if (window.scrollY > 200) {
+    btn.style.display = "flex";
+  } else {
+    btn.style.display = "none";
+  }
+});
+</script>
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

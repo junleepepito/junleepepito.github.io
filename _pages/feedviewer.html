@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>View Blogger Feed</title>
+<style>
+  body { font-family: system-ui, sans-serif; padding: 1em; max-width: 600px; margin: auto; }
+  input[type="text"] { width: 100%; padding: 0.5em; margin-bottom: 0.5em; font-size: 1em; }
+  button { padding: 0.5em 1em; font-size: 1em; }
+  ul { padding-left: 1.2em; }
+</style>
+</head>
+<body>
+  <h1>Load Blogger Feed</h1>
+  <p>Enter the feed URL or local XML file path:</p>
+  <input type="text" id="feedUrl" placeholder="e.g. feed.xml or https://example.com/feeds/posts/default" />
+  <button id="loadBtn">Load Feed</button>
+
+  <h2>Posts</h2>
+  <ul id="posts"></ul>
+
+  <script>
+    document.getElementById('loadBtn').addEventListener('click', () => {
+      const feedUrl = document.getElementById('feedUrl').value.trim();
+      if (!feedUrl) {
+        alert('Please enter a feed URL or path.');
+        return;
+      }
+      const list = document.getElementById('posts');
+      list.innerHTML = 'Loading...';
+
+      fetch(feedUrl)
+        .then(response => {
+          if (!response.ok) throw new Error(`Network response was not ok (${response.status})`);
+          return response.text();
+        })
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+          const entries = data.querySelectorAll('entry, item'); // support Atom <entry> and RSS <item>
+          if (entries.length === 0) {
+            list.innerHTML = '<li>No posts found in feed.</li>';
+            return;
+          }
+          list.innerHTML = '';
+          entries.forEach(entry => {
+            // Atom feed
+            let title = entry.querySelector('title')?.textContent || 'No title';
+            let link = entry.querySelector('link[rel="alternate"]')?.getAttribute('href');
+            // fallback for RSS
+            if (!link) link = entry.querySelector('link')?.textContent || '#';
+
+            const li = document.createElement('li');
+            li.innerHTML = `<a href="${link}" target="_blank" rel="noopener">${title}</a>`;
+            list.appendChild(li);
+          });
+        })
+        .catch(err => {
+          list.innerHTML = `<li>Error loading feed: ${err.message}</li>`;
+          console.error(err);
+        });
+    });
+  </script>
+</body>
+</html>
