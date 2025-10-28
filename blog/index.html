@@ -1,0 +1,103 @@
+---
+layout: none
+title: "Blog"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  {% if jekyll.environment == "production" %}
+  <!-- Bulma from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" integrity="sha384-DCY3M8xLkMu6c9IKcKbe+jHKMjelnwC0p+SBaxfHxoBYZWdJF2X400UdBCgATtAB" crossorigin="anonymous">
+  {% else %}
+  <!-- Local fallback for offline dev -->
+  <link rel="stylesheet" href="{{ '/assets/css/bulma.min.css' | relative_url }}">
+  {% endif %}
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+
+  <style>
+    .navbar.is-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .titled {
+      font-family: 'Raleway', serif !important;
+      font-size: 48px !important;
+      font-weight: 400 !important;
+      line-height: 56px !important;
+    }
+    .blog-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar is-sticky" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/your-logo.png' | relative_url }}" alt="Site Logo" width="112" height="28">
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="{{ '/services/' | relative_url }}">SERVICES</a>
+        <a class="navbar-item" href="{{ '/about/' | relative_url }}">ABOUT</a>
+        <a class="navbar-item" href="{{ '/blog/' | relative_url }}">BLOG</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Section -->
+  <section class="section">
+    <div class="container">
+      <h1 class="title titled has-text-centered mb-6">Latest Blog Posts</h1>
+
+      <div class="columns is-multiline">
+        {% for post in site.posts %}
+        <div class="column is-4">
+          <div class="card blog-card">
+            <div class="card-content">
+              <p class="title is-5">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </p>
+              <p class="subtitle is-6 has-text-grey">
+                {{ post.date | date: "%B %d, %Y" }}
+              </p>
+              <div class="content">
+                {{ post.excerpt | strip_html | truncate: 120 }}
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="{{ post.url | relative_url }}" class="card-footer-item">Read More</a>
+            </footer>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+</body>
+</html>

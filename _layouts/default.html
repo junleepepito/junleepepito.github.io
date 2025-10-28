@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +9,14 @@
   <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
 
   <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
 
   <!-- Icons (Bootstrap Icons CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --gh-bg: #f6f8fa;
       --gh-surface: #ffffff;
       --gh-muted: #6a737d;
@@ -23,21 +25,87 @@
       --container-max: 1100px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    body{background: var(--gh-bg);color: #24292e;min-height: 100vh;}
-    .gh-topnav{background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));border-bottom: 1px solid var(--gh-border);backdrop-filter: blur(4px);}
-    .gh-logo{font-weight: 600;color: #24292e;letter-spacing: -0.5px;}
-    .gh-page{max-width: var(--container-max);margin: 24px auto;}
-    .gh-side{background: var(--gh-surface);border: 1px solid var(--gh-border);border-radius: 6px;padding: 12px;font-size: 14px;}
-    .repo-header{background: transparent;padding: 12px 0;display:flex;align-items:center;gap:12px;}
-    .repo-badge{border-radius:6px;padding:4px 8px;font-size:12px;background:#f1f8ff;color:var(--gh-accent);border:1px solid rgba(47,129,247,0.12)}
-    .file-list .list-group-item{border: 1px solid var(--gh-border);border-radius:6px;margin-bottom:8px;}
-    .content-shell{background: var(--gh-surface);color: inherit;border: 1px solid var(--gh-border);border-radius:6px;padding:16px;font-size:15px;line-height:1.6;}
-    .muted{color:var(--gh-muted);}
-    @media (max-width: 991px){.gh-page{padding:0 12px}.repo-header{flex-wrap:wrap}}
 
-    .hide {display: none!important;}
+    body {
+      background: var(--gh-bg);
+      color: #24292e;
+      min-height: 100vh;
+    }
+
+    .gh-topnav {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+      border-bottom: 1px solid var(--gh-border);
+      backdrop-filter: blur(4px);
+    }
+
+    .gh-logo {
+      font-weight: 600;
+      color: #24292e;
+      letter-spacing: -0.5px;
+    }
+
+    .gh-page {
+      max-width: var(--container-max);
+      margin: 24px auto;
+    }
+
+    .gh-side {
+      background: var(--gh-surface);
+      border: 1px solid var(--gh-border);
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    .repo-header {
+      background: transparent;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .repo-badge {
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 12px;
+      background: #f1f8ff;
+      color: var(--gh-accent);
+      border: 1px solid rgba(47, 129, 247, 0.12)
+    }
+
+    .file-list .list-group-item {
+      border: 1px solid var(--gh-border);
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    .content-shell {
+      background: var(--gh-surface);
+      color: inherit;
+      border: 1px solid var(--gh-border);
+      border-radius: 6px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .muted {
+      color: var(--gh-muted);
+    }
+
+    @media (max-width: 991px) {
+      .gh-page {
+        padding: 0 12px
+      }
+
+      .repo-header {
+        flex-wrap: wrap
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Top navigation -->
@@ -53,10 +121,19 @@
       </div>
 
       <!-- Centered search -->
-      <form class="d-none d-md-flex input-group mx-auto hide" style="max-width:420px;">
-        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
-        <input class="form-control border-start-0" type="search" placeholder="Search or jump to...">
-      </form>
+      <!-- <div class="d-none d-md-flex mx-auto" style="max-width:420px;"> -->
+      <div class="d-none d-md-flex mx-auto" style="max-width:420px;">
+        <h1>J U N L E E</h1>
+      </div>
+      <div class="d-none mx-auto" style="max-width:420px;">
+        <form class="d-none input-group mx-auto" style="max-width:420px;">
+          <span class="input-group-text bg-white border-end-0">
+            <i class="bi bi-search"></i>
+          </span>
+          <input class="form-control border-start-0" type="search" placeholder="Search or jump to...">
+        </form>
+      </div>
+
 
       <!-- Right side (links placeholder) -->
       <div class="d-flex align-items-center gap-2">
@@ -72,7 +149,11 @@
   <main class="gh-page container">
     <div class="repo-header">
       <div class="d-flex align-items-center">
-        <h4 class="mb-0"><a href="/">{{ site.github_username | default: "username" }}.github.io</a> / 
+        <h4 class="mb-0">
+          <a href="/" class="text-decoration-none">
+            <i class="bi bi-house-door me-1"></i>
+            <!-- {{ site.github_username | default: "username" }}.github.io -->
+          </a>
           <!-- <strong>{{ site.title }}</strong> -->
         </h4>
         <!-- <span class="repo-badge ms-3">Latest update {{ site.time | date: "%b %d, %Y" }}</span> -->
@@ -83,12 +164,13 @@
     <div class="row mt-3">
       <aside class="col-lg-3 mb-3">
         <div class="gh-side">
-          <h6 class="mb-2">++</h6>
+          <!-- <h6 class="mb-2">++</h6> -->
           <div class="list-unstyled small">
-            <div class="mb-2"><strong class="me-2">+</strong>
-              <br/><span class="muted">· latest commit {{ site.time | date: "%b %d, %Y" }}</span></div>
+            <div class="mb-2">
+              <span class="muted">latest commit {{ site.time | date: "%b %d, %Y" }}</span>
+            </div>
             {% for file in site.static_files %}
-              <div class="mb-2"><a href="{{ file.path }}" class="d-inline-block">{{ file.name }}</a></div>
+            <div class="mb-2"><a href="{{ file.path }}" class="d-inline-block">{{ file.name }}</a></div>
             {% endfor %}
           </div>
           <hr>
@@ -110,6 +192,8 @@
     </div>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

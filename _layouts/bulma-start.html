@@ -4,16 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JUNLEE</title>
-  
+  <title>{{ page.title }}</title>
+  {% if jekyll.environment == "production" %}
+  <!-- Bulma from CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" integrity="sha384-DCY3M8xLkMu6c9IKcKbe+jHKMjelnwC0p+SBaxfHxoBYZWdJF2X400UdBCgATtAB" crossorigin="anonymous">
+  {% else %}
   <!-- Local fallback for offline dev or if CDN fails -->
-  <link rel="stylesheet" href="/assets/css/bulma.min.css" onerror="this.onerror=null;this.href='/assets/css/bulma.min.css';">
-  
+  <link rel="stylesheet" href="{{ '/assets/css/bulma.min.css' | relative_url }}" onerror="this.onerror=null;this.href='/assets/css/bulma.min.css';">
+  {% endif %}
 
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
 
   <style>
     @media(max-width: 500px) {
@@ -52,8 +55,8 @@
   <!-- Navbar -->
    <nav class="navbar is-sticky" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="/">
-      <img src="/assets/images/junlee-logo.png" alt="J U N L E E" width="112" height="28">
+    <a class="navbar-item" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/junlee-logo.png' | relative_url }}" alt="J U N L E E" width="112" height="28">
     </a>
   </div>
   <div class="navbar-menu">
@@ -75,7 +78,7 @@
             <h1 class="title titled is-1 mb-6">
               Evolving business with technology
             </h1>
-            <img src="/assets/images/junlee-logo.png" alt="Site Logo" width="112" height="28">
+            <img src="{{ '/assets/images/junlee-logo.png' | relative_url }}" alt="Site Logo" width="112" height="28">
             <div class="buttons">
               <button class="button is-yellow">Established technical teams</button>
               <button class="button">Less-technical teams</button>
@@ -83,7 +86,7 @@
           </div>
           <div class="column is-5" data-aos="fade-right">
             <figure class="image is-square">
-              <img src="/assets/images/undraw_Camera_re_cnp4.svg">
+              <img src="{{ '/assets/images/undraw_Camera_re_cnp4.svg' | relative_url }}">
             </figure>
           </div>
         </div>
@@ -98,7 +101,7 @@
         <div class="columns is-vcentered is-centered reverse-columns">
           <div class="column is-5" data-aos="fade-left">
             <figure class="image is-square">
-              <img src="/assets/images/undraw_Camera_re_cnp4.svg">
+              <img src="{{ '/assets/images/undraw_Camera_re_cnp4.svg' | relative_url }}">
             </figure>
           </div>
           <div class="column is-5" data-aos="fade-down">
@@ -131,7 +134,7 @@
           </div>
           <div class="column is-5" data-aos="fade-up">
             <figure class="image is-square">
-              <img src="/assets/images/undraw_Camera_re_cnp4.svg">
+              <img src="{{ '/assets/images/undraw_Camera_re_cnp4.svg' | relative_url }}">
             </figure>
           </div>
         </div>

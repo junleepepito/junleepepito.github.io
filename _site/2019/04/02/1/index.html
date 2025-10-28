@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +9,14 @@
   <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
   <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
 
   <!-- Icons (Bootstrap Icons CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --gh-bg: #f6f8fa;
       --gh-surface: #ffffff;
       --gh-muted: #6a737d;
@@ -23,21 +25,87 @@
       --container-max: 1100px;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    body{background: var(--gh-bg);color: #24292e;min-height: 100vh;}
-    .gh-topnav{background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.95));border-bottom: 1px solid var(--gh-border);backdrop-filter: blur(4px);}
-    .gh-logo{font-weight: 600;color: #24292e;letter-spacing: -0.5px;}
-    .gh-page{max-width: var(--container-max);margin: 24px auto;}
-    .gh-side{background: var(--gh-surface);border: 1px solid var(--gh-border);border-radius: 6px;padding: 12px;font-size: 14px;}
-    .repo-header{background: transparent;padding: 12px 0;display:flex;align-items:center;gap:12px;}
-    .repo-badge{border-radius:6px;padding:4px 8px;font-size:12px;background:#f1f8ff;color:var(--gh-accent);border:1px solid rgba(47,129,247,0.12)}
-    .file-list .list-group-item{border: 1px solid var(--gh-border);border-radius:6px;margin-bottom:8px;}
-    .content-shell{background: var(--gh-surface);color: inherit;border: 1px solid var(--gh-border);border-radius:6px;padding:16px;font-size:15px;line-height:1.6;}
-    .muted{color:var(--gh-muted);}
-    @media (max-width: 991px){.gh-page{padding:0 12px}.repo-header{flex-wrap:wrap}}
 
-    .hide {display: none!important;}
+    body {
+      background: var(--gh-bg);
+      color: #24292e;
+      min-height: 100vh;
+    }
+
+    .gh-topnav {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.95));
+      border-bottom: 1px solid var(--gh-border);
+      backdrop-filter: blur(4px);
+    }
+
+    .gh-logo {
+      font-weight: 600;
+      color: #24292e;
+      letter-spacing: -0.5px;
+    }
+
+    .gh-page {
+      max-width: var(--container-max);
+      margin: 24px auto;
+    }
+
+    .gh-side {
+      background: var(--gh-surface);
+      border: 1px solid var(--gh-border);
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 14px;
+    }
+
+    .repo-header {
+      background: transparent;
+      padding: 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .repo-badge {
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 12px;
+      background: #f1f8ff;
+      color: var(--gh-accent);
+      border: 1px solid rgba(47, 129, 247, 0.12)
+    }
+
+    .file-list .list-group-item {
+      border: 1px solid var(--gh-border);
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+
+    .content-shell {
+      background: var(--gh-surface);
+      color: inherit;
+      border: 1px solid var(--gh-border);
+      border-radius: 6px;
+      padding: 16px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .muted {
+      color: var(--gh-muted);
+    }
+
+    @media (max-width: 991px) {
+      .gh-page {
+        padding: 0 12px
+      }
+
+      .repo-header {
+        flex-wrap: wrap
+      }
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Top navigation -->
@@ -53,10 +121,19 @@
       </div>
 
       <!-- Centered search -->
-      <form class="d-none d-md-flex input-group mx-auto hide" style="max-width:420px;">
-        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search"></i></span>
-        <input class="form-control border-start-0" type="search" placeholder="Search or jump to...">
-      </form>
+      <!-- <div class="d-none d-md-flex mx-auto" style="max-width:420px;"> -->
+      <div class="d-none d-md-flex mx-auto" style="max-width:420px;">
+        <h1>J U N L E E</h1>
+      </div>
+      <div class="d-none mx-auto" style="max-width:420px;">
+        <form class="d-none input-group mx-auto" style="max-width:420px;">
+          <span class="input-group-text bg-white border-end-0">
+            <i class="bi bi-search"></i>
+          </span>
+          <input class="form-control border-start-0" type="search" placeholder="Search or jump to...">
+        </form>
+      </div>
+
 
       <!-- Right side (links placeholder) -->
       <div class="d-flex align-items-center gap-2">
@@ -72,10 +149,14 @@
   <main class="gh-page container">
     <div class="repo-header">
       <div class="d-flex align-items-center">
-        <h4 class="mb-0"><a href="/">junleepepito.github.io</a> / 
+        <h4 class="mb-0">
+          <a href="/" class="text-decoration-none">
+            <i class="bi bi-house-door me-1"></i>
+            <!-- junleepepito.github.io -->
+          </a>
           <!-- <strong>@junee</strong> -->
         </h4>
-        <!-- <span class="repo-badge ms-3">Latest update Sep 18, 2025</span> -->
+        <!-- <span class="repo-badge ms-3">Latest update Oct 15, 2025</span> -->
         <!-- <span class="repo-badge ms-3">Public</span> -->
       </div>
     </div>
@@ -83,64 +164,71 @@
     <div class="row mt-3">
       <aside class="col-lg-3 mb-3">
         <div class="gh-side">
-          <h6 class="mb-2">++</h6>
+          <!-- <h6 class="mb-2">++</h6> -->
           <div class="list-unstyled small">
-            <div class="mb-2"><strong class="me-2">+</strong>
-              <br/><span class="muted">· latest commit Sep 18, 2025</span></div>
+            <div class="mb-2">
+              <span class="muted">latest commit Oct 15, 2025</span>
+            </div>
             
-              <div class="mb-2"><a href="/README.md" class="d-inline-block">README.md</a></div>
+            <div class="mb-2"><a href="/README.md" class="d-inline-block">README.md</a></div>
             
-              <div class="mb-2"><a href="/_pages/em.html" class="d-inline-block">em.html</a></div>
+            <div class="mb-2"><a href="/_pages/em.html" class="d-inline-block">em.html</a></div>
             
-              <div class="mb-2"><a href="/_pages/feedviewer.html" class="d-inline-block">feedviewer.html</a></div>
+            <div class="mb-2"><a href="/_pages/feedviewer.html" class="d-inline-block">feedviewer.html</a></div>
             
-              <div class="mb-2"><a href="/_pages/gistsample.html" class="d-inline-block">gistsample.html</a></div>
+            <div class="mb-2"><a href="/_pages/gistsample.html" class="d-inline-block">gistsample.html</a></div>
             
-              <div class="mb-2"><a href="/_pages/picosample.html" class="d-inline-block">picosample.html</a></div>
+            <div class="mb-2"><a href="/_pages/picosample.html" class="d-inline-block">picosample.html</a></div>
             
-              <div class="mb-2"><a href="/_pages/playlist_generator.html" class="d-inline-block">playlist_generator.html</a></div>
+            <div class="mb-2"><a href="/_pages/playlist_generator.html" class="d-inline-block">playlist_generator.html</a></div>
             
-              <div class="mb-2"><a href="/_pages/reloader.html" class="d-inline-block">reloader.html</a></div>
+            <div class="mb-2"><a href="/_pages/reloader.html" class="d-inline-block">reloader.html</a></div>
             
-              <div class="mb-2"><a href="/assets/css/bootstrap.min.css" class="d-inline-block">bootstrap.min.css</a></div>
+            <div class="mb-2"><a href="/assets/css/bootstrap.min.css" class="d-inline-block">bootstrap.min.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/bootstrap.min.css.map" class="d-inline-block">bootstrap.min.css.map</a></div>
+            <div class="mb-2"><a href="/assets/css/bootstrap.min.css.map" class="d-inline-block">bootstrap.min.css.map</a></div>
             
-              <div class="mb-2"><a href="/assets/css/dashboard.css" class="d-inline-block">dashboard.css</a></div>
+            <div class="mb-2"><a href="/assets/css/bulma.min.css" class="d-inline-block">bulma.min.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/em.css" class="d-inline-block">em.css</a></div>
+            <div class="mb-2"><a href="/assets/css/dashboard.css" class="d-inline-block">dashboard.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/m3/style.css" class="d-inline-block">style.css</a></div>
+            <div class="mb-2"><a href="/assets/css/em.css" class="d-inline-block">em.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/main.css" class="d-inline-block">main.css</a></div>
+            <div class="mb-2"><a href="/assets/css/m3/style.css" class="d-inline-block">style.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/picocontent_script.css" class="d-inline-block">picocontent_script.css</a></div>
+            <div class="mb-2"><a href="/assets/css/main.css" class="d-inline-block">main.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/picodocs-X4QYOAQA.css" class="d-inline-block">picodocs-X4QYOAQA.css</a></div>
+            <div class="mb-2"><a href="/assets/css/picocontent_script.css" class="d-inline-block">picocontent_script.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/picomain-TS6CRX7I.css" class="d-inline-block">picomain-TS6CRX7I.css</a></div>
+            <div class="mb-2"><a href="/assets/css/picodocs-X4QYOAQA.css" class="d-inline-block">picodocs-X4QYOAQA.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/styles.css" class="d-inline-block">styles.css</a></div>
+            <div class="mb-2"><a href="/assets/css/picomain-TS6CRX7I.css" class="d-inline-block">picomain-TS6CRX7I.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/w3.css" class="d-inline-block">w3.css</a></div>
+            <div class="mb-2"><a href="/assets/css/styles.css" class="d-inline-block">styles.css</a></div>
             
-              <div class="mb-2"><a href="/assets/css/w3pro.css" class="d-inline-block">w3pro.css</a></div>
+            <div class="mb-2"><a href="/assets/css/w3.css" class="d-inline-block">w3.css</a></div>
             
-              <div class="mb-2"><a href="/assets/images/favicon.ico" class="d-inline-block">favicon.ico</a></div>
+            <div class="mb-2"><a href="/assets/css/w3pro.css" class="d-inline-block">w3pro.css</a></div>
             
-              <div class="mb-2"><a href="/assets/images/gcash.png" class="d-inline-block">gcash.png</a></div>
+            <div class="mb-2"><a href="/assets/images/favicon.ico" class="d-inline-block">favicon.ico</a></div>
             
-              <div class="mb-2"><a href="/assets/js/bootstrap.bundle.min.js" class="d-inline-block">bootstrap.bundle.min.js</a></div>
+            <div class="mb-2"><a href="/assets/images/gcash.png" class="d-inline-block">gcash.png</a></div>
             
-              <div class="mb-2"><a href="/assets/js/bootstrap.bundle.min.js.map" class="d-inline-block">bootstrap.bundle.min.js.map</a></div>
+            <div class="mb-2"><a href="/assets/images/junlee-logo.png" class="d-inline-block">junlee-logo.png</a></div>
             
-              <div class="mb-2"><a href="/assets/js/cheatsheet.js" class="d-inline-block">cheatsheet.js</a></div>
+            <div class="mb-2"><a href="/assets/images/undraw_Camera_re_cnp4.svg" class="d-inline-block">undraw_Camera_re_cnp4.svg</a></div>
             
-              <div class="mb-2"><a href="/assets/js/color-modes.js" class="d-inline-block">color-modes.js</a></div>
+            <div class="mb-2"><a href="/assets/js/bootstrap.bundle.min.js" class="d-inline-block">bootstrap.bundle.min.js</a></div>
             
-              <div class="mb-2"><a href="/assets/js/dashboard.js" class="d-inline-block">dashboard.js</a></div>
+            <div class="mb-2"><a href="/assets/js/bootstrap.bundle.min.js.map" class="d-inline-block">bootstrap.bundle.min.js.map</a></div>
             
-              <div class="mb-2"><a href="/assets/js/defbody.js" class="d-inline-block">defbody.js</a></div>
+            <div class="mb-2"><a href="/assets/js/cheatsheet.js" class="d-inline-block">cheatsheet.js</a></div>
+            
+            <div class="mb-2"><a href="/assets/js/color-modes.js" class="d-inline-block">color-modes.js</a></div>
+            
+            <div class="mb-2"><a href="/assets/js/dashboard.js" class="d-inline-block">dashboard.js</a></div>
+            
+            <div class="mb-2"><a href="/assets/js/defbody.js" class="d-inline-block">defbody.js</a></div>
             
           </div>
           <hr>
@@ -152,9 +240,9 @@
       <section class="col-lg-9">
         <div class="mb-3">
           <!-- <h5>1</h5> -->
-          <!-- <div class="muted small mb-2">Latest update Sep 18, 2025</div> -->
+          <!-- <div class="muted small mb-2">Latest update Oct 15, 2025</div> -->
           <div class="content-shell">
-            <!-- <div class="muted small mb-2">Latest update Sep 18, 2025</div> -->
+            <!-- <div class="muted small mb-2">Latest update Oct 15, 2025</div> -->
             <section class="mb-4">
   <h2 class="mb-1">1</h2>
   <div class="muted small mb-3">
@@ -191,6 +279,8 @@
     </div>
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
