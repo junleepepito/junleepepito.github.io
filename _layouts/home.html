@@ -77,21 +77,15 @@ layout: default
   <div class="todo-title">
     <span>📝</span> My Tasks
   </div>
+
   <ul class="todo-list">
+  {% for item in site.data.tasks %}
     <li class="todo-item">
-      <input type="checkbox" checked> <span>Complete DTI/BIR registration update</span>
+      <input type="checkbox" {% if item.done %}checked{% endif %} onclick="return false;">
+    <span>{{ item.name }}</span>
     </li>
-    <li class="todo-item">
-      <input type="checkbox"> <span>Finalize Expo app Play Store build</span>
-    </li>
-    <li class="todo-item">
-      <input type="checkbox"> <span>Organize photo editing assets on Linux</span>
-    </li>
-    <li class="todo-item">
-      <input type="checkbox"> <span>Review MLBB performance on new hardware</span>
-    </li>
+  {% endfor %}
   </ul>
-</div>
 
 <hr>
 
