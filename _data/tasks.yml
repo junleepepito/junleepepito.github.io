@@ -1,0 +1,9 @@
+# _data/tasks.yml
+- name: "Complete DTI/BIR registration update"
+  done: true
+- name: "Finalize Expo app Play Store build"
+  done: false
+- name: "Organize photo editing assets on Linux"
+  done: false
+- name: "Review MLBB performance on new hardware"
+  done: false
