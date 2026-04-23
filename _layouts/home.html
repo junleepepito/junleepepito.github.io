@@ -1,6 +1,77 @@
 ---
 layout: default
 ---
+<style>
+  .todo-container {
+    background: var(--main-bg);
+    border: 1px solid var(--main-border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .todo-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--heading-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--main-border-color);
+    color: var(--text-color);
+  }
+
+  .todo-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Custom Checkbox Styling */
+  .todo-item input[type="checkbox"] {
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid var(--checkbox-color, #6b7280);
+    border-radius: 4px;
+    margin-right: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .todo-item input[type="checkbox"]:checked {
+    background-color: var(--link-color);
+    border-color: var(--link-color);
+  }
+
+  .todo-item input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    color: white;
+    font-size: 0.8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .todo-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+</style>
 
 <div class="mb-4">
   <h1 class="dynamic-title">My Tasks</h1>
